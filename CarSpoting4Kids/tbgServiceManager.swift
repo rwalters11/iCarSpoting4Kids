@@ -1,6 +1,6 @@
 //
 //  tbgServiceManager.swift
-//  ConnectedColors
+//  CarSpoting4Kids
 //
 //  Created by Richard Walters on 31/07/2017.
 //  Copyright © 2017 Example. All rights reserved.
@@ -20,8 +20,9 @@ class tbgServiceManager : NSObject {
     
     // Service type must be a unique string, at most 15 characters long
     // and can contain only ASCII lowercase letters, numbers and hyphens.
-    private let ColorServiceType = "car-spotting"
+    private let ColorServiceType = "tbg-carspotting"
     
+    // Create our identity
     private let myPeerId = MCPeerID(displayName: UIDevice.current.name)
     
     private let serviceAdvertiser : MCNearbyServiceAdvertiser
@@ -30,24 +31,31 @@ class tbgServiceManager : NSObject {
     var delegate : tbgServiceManagerDelegate?
     
     lazy var session : MCSession = {
+        
         let session = MCSession(peer: self.myPeerId, securityIdentity: nil, encryptionPreference: .required)
         session.delegate = self
         return session
     }()
     
     override init() {
+        
+        // Create service advertiser and browser for the app over Bonjour
         self.serviceAdvertiser = MCNearbyServiceAdvertiser(peer: myPeerId, discoveryInfo: nil, serviceType: ColorServiceType)
         self.serviceBrowser = MCNearbyServiceBrowser(peer: myPeerId, serviceType: ColorServiceType)
         
         super.init()
         
+        // Delegate and start the advertiser
         self.serviceAdvertiser.delegate = self
         self.serviceAdvertiser.startAdvertisingPeer()
         
+        // Delegate and start the browser
         self.serviceBrowser.delegate = self
         self.serviceBrowser.startBrowsingForPeers()
     }
     
+    
+    // Custom function to send a string representing the colour chosen in the test app
     func send(colorName : String) {
         NSLog("%@", "sendColor: \(colorName) to \(session.connectedPeers.count) peers")
         
@@ -63,6 +71,8 @@ class tbgServiceManager : NSObject {
     }
     
     deinit {
+        
+        // Stop the advertiser and browser
         self.serviceAdvertiser.stopAdvertisingPeer()
         self.serviceBrowser.stopBrowsingForPeers()
     }

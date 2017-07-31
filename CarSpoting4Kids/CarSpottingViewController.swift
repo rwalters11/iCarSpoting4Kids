@@ -2,14 +2,18 @@ import UIKit
 
 class CarSpottingViewController: UIViewController {
 
-    @IBOutlet weak var connectionsLabel: UILabel!
-
+    
+    // Instantiate the MultipeerConnectivity service manager
     let carSpottingService = tbgServiceManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         carSpottingService.delegate = self
     }
+    
+    @IBOutlet weak var connectionsLabel: UILabel!
 
     @IBAction func redTapped() {
         self.change(color: .red)
@@ -21,6 +25,9 @@ class CarSpottingViewController: UIViewController {
         carSpottingService.send(colorName: "yellow")
     }
 
+    // MARK: - Functions
+    
+    // Function to change the background colour on the test app
     func change(color : UIColor) {
         UIView.animate(withDuration: 0.2) {
             self.view.backgroundColor = color
@@ -29,6 +36,7 @@ class CarSpottingViewController: UIViewController {
     
 }
 
+// Extension to handle the data from the connectivity service
 extension CarSpottingViewController : tbgServiceManagerDelegate {
 
     func connectedDevicesChanged(manager: tbgServiceManager, connectedDevices: [String]) {
