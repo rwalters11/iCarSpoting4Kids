@@ -13,6 +13,7 @@
 		BF6F13FD1E4E58C90018D56E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF6F13FB1E4E58C90018D56E /* Main.storyboard */; };
 		BF6F13FF1E4E58C90018D56E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF6F13FE1E4E58C90018D56E /* Assets.xcassets */; };
 		BF6F14021E4E58C90018D56E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF6F14001E4E58C90018D56E /* LaunchScreen.storyboard */; };
+		D33104BC1F30C04600A3A53A /* 5Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33104BB1F30C04600A3A53A /* 5Star.swift */; };
 		D356D1A01F2FC05200677429 /* tbgServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D356D19F1F2FC05200677429 /* tbgServiceManager.swift */; };
 		D364D5F41F2FDEDB00F8273E /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = D364D5F31F2FDEDB00F8273E /* Notes */; };
 		D3A1E8991F2FD0FF00A925ED /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A1E8981F2FD0FF00A925ED /* Default-568h@2x.png */; };
@@ -29,6 +30,7 @@
 		BF6F13FE1E4E58C90018D56E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF6F14011E4E58C90018D56E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF6F14031E4E58C90018D56E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "/Users/richardwalters/iOS Development/CarSpoting4Kids/CarSpoting4Kids/Info.plist"; sourceTree = "<absolute>"; };
+		D33104BB1F30C04600A3A53A /* 5Star.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 5Star.swift; sourceTree = "<group>"; };
 		D356D19F1F2FC05200677429 /* tbgServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tbgServiceManager.swift; sourceTree = "<group>"; };
 		D364D5F31F2FDEDB00F8273E /* Notes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Notes; sourceTree = "<group>"; };
 		D3A1E8981F2FD0FF00A925ED /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				BF6F13F71E4E58C90018D56E /* AppDelegate.swift */,
 				BF6F13F91E4E58C90018D56E /* CarSpottingViewController.swift */,
 				D356D19F1F2FC05200677429 /* tbgServiceManager.swift */,
+				D33104BB1F30C04600A3A53A /* 5Star.swift */,
 				BF6F13FB1E4E58C90018D56E /* Main.storyboard */,
 				BF6F13FE1E4E58C90018D56E /* Assets.xcassets */,
 				BF6F14001E4E58C90018D56E /* LaunchScreen.storyboard */,
@@ -224,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF6F13FA1E4E58C90018D56E /* CarSpottingViewController.swift in Sources */,
+				D33104BC1F30C04600A3A53A /* 5Star.swift in Sources */,
 				BF6F13F81E4E58C90018D56E /* AppDelegate.swift in Sources */,
 				D356D1A01F2FC05200677429 /* tbgServiceManager.swift in Sources */,
 			);

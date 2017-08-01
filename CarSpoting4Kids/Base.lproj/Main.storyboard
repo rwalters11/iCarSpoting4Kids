@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,26 +22,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="57D-ZF-Mc0">
-                                <rect key="frame" x="35" y="508" width="141" height="90"/>
+                                <rect key="frame" x="35" y="508" width="105.5" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connections: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwt-mK-OVB">
-                                        <rect key="frame" x="0.0" y="0.0" width="141" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="105.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="V1C-Ia-VEW">
-                                        <rect key="frame" x="0.0" y="60" width="141" height="30"/>
+                                        <rect key="frame" x="0.0" y="60" width="105.5" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dI4-HQ-8IB">
-                                                <rect key="frame" x="0.0" y="0.0" width="87" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="30"/>
                                                 <state key="normal" title="Red"/>
                                                 <connections>
                                                     <action selector="redTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="l5x-q5-caT"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQs-5d-gd8">
-                                                <rect key="frame" x="97" y="0.0" width="44" height="30"/>
+                                                <rect key="frame" x="61.5" y="0.0" width="44" height="30"/>
                                                 <state key="normal" title="Yellow"/>
                                                 <connections>
                                                     <action selector="yellowTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="s6g-Uc-ro8"/>
@@ -50,22 +51,38 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DtC-BC-9pX">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2A1-9e-0UV">
+                                <rect key="frame" x="16" y="28" width="343" height="275"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Spotting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wi0-UF-Dcf">
+                                        <rect key="frame" x="0.0" y="0.0" width="96.5" height="87"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="noPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Jrr-vo-aRc">
+                                        <rect key="frame" x="0.0" y="95" width="343" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="GQI-LF-Mel"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="52I-tP-As8" customClass="FiveStar" customModule="CarSpoting4Kids" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="231" width="252" height="44"/>
+                                    </stackView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="rOL-dx-Rb6"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jrr-vo-aRc" secondAttribute="trailing" id="pBB-9G-Fu4"/>
                                 </constraints>
-                            </imageView>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="DtC-BC-9pX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2ET-24-v88"/>
-                            <constraint firstItem="DtC-BC-9pX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6NI-LP-59D"/>
-                            <constraint firstItem="57D-ZF-Mc0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-82" id="H02-Rg-TNI"/>
-                            <constraint firstItem="57D-ZF-Mc0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="219.5" id="Px2-QZ-aWa"/>
-                            <constraint firstAttribute="trailing" secondItem="DtC-BC-9pX" secondAttribute="trailing" id="SR7-du-5Sg"/>
-                            <constraint firstItem="57D-ZF-Mc0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="35" id="XS6-gp-dsa"/>
-                            <constraint firstItem="57D-ZF-Mc0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="508" id="aaR-xz-Glb"/>
+                            <constraint firstItem="2A1-9e-0UV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0g7-a1-dvu"/>
+                            <constraint firstAttribute="bottom" secondItem="2A1-9e-0UV" secondAttribute="bottom" constant="364" id="6LG-Li-Tkf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="57D-ZF-Mc0" secondAttribute="bottom" constant="69" id="Ikn-c8-fBx"/>
+                            <constraint firstItem="57D-ZF-Mc0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="19" id="JjH-p8-wOk"/>
+                            <constraint firstItem="2A1-9e-0UV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="QOf-L9-gcI"/>
+                            <constraint firstItem="2A1-9e-0UV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="SpI-cw-zJE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Car Spotting" id="PKz-4Y-qQI"/>
@@ -96,4 +113,7 @@
             <point key="canvasLocation" x="322" y="137"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="noPhoto" width="540" height="540"/>
+    </resources>
 </document>
